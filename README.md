@@ -2,6 +2,8 @@
 
 Situs statis berbahasa Indonesia untuk memperkenalkan proyek controller robot kapal apung berbasis ESP32 dan aplikasi Flutter. Tidak memerlukan instalasi package tambahan; server lokal menggunakan Node.js bawaan.
 
+Antarmuka dilengkapi animasi ringan, parallax pointer pada ilustrasi hero, navigasi responsif, indikator progres baca, dan reveal saat scroll. Preferensi `prefers-reduced-motion` dihormati agar gerak dapat diminimalkan dari pengaturan perangkat.
+
 ## Jalankan dari terminal VS Code
 
 Pastikan Node.js tersedia, buka folder ini di VS Code, lalu jalankan:
