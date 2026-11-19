@@ -1,0 +1,10 @@
+{
+  "name": "kapal-karam-project-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Situs pengenalan proyek KAPAL KARAM",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  }
+}
