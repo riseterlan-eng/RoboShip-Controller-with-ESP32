@@ -34,3 +34,5 @@ Workflow `.github/workflows/deploy.yml` menerbitkan isi folder `public/` ke GitH
 5. Situs akan tersedia di `https://USERNAME.github.io/NAMA-REPOSITORY/`.
 
 Perubahan pada folder `public/` akan diperbarui otomatis setelah di-push ke branch `main`. Aset web menggunakan path relatif agar tetap berjalan pada URL GitHub Pages tersebut.
+
+Website menyediakan tautan repository dan unduhan ZIP langsung dari branch `main` di GitHub. ZIP itu berisi sumber situs pengenalan; aplikasi controller Flutter merupakan folder proyek terpisah.

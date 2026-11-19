@@ -39,6 +39,7 @@ button { font: inherit; }
 .nav-cta:hover { background: var(--mint); color: var(--bg); }
 .nav-cta span { font-size: 15px; }
 .nav-cta:hover span { transform: translate(2px, -2px); }
+.nav-github { gap: 9px; }
 .menu-toggle { display: none; }
 .section-shell { width: min(1200px, calc(100% - 11vw)); margin: 0 auto; }
 
@@ -239,6 +240,9 @@ button { font: inherit; }
 .launch-copy > p { max-width: 450px; margin: 12px 0 22px; color: #aec4b7; font-size: 11px; line-height: 1.85; }
 .button-light { min-height: 41px; background: #d8f0dc; color: #13352f; }
 .button-light:hover { background: white; }
+.launch-actions { position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.button-outline { min-height: 41px; border-color: rgba(165, 221, 193, .35); color: #d8eee0; }
+.button-outline:hover { border-color: var(--mint); background: rgba(88, 223, 191, .1); }
 .launch-side { position: relative; display: flex; align-items: center; justify-content: center; }
 .launch-compass { position: relative; display: grid; width: 165px; aspect-ratio: 1; place-items: center; border: 1px solid rgba(125, 210, 170, .33); border-radius: 50%; }
 .launch-compass::before, .launch-compass::after { position: absolute; top: 50%; left: 50%; width: 135px; height: 1px; transform: translate(-50%, -50%); background: rgba(125, 210, 170, .25); content: ''; }
@@ -251,6 +255,9 @@ button { font: inherit; }
 .quickstart { display: grid; grid-template-columns: .78fr 1.22fr; gap: 50px; align-items: start; padding: 61px 11px 0; }
 .quickstart-label { color: var(--mint); font-family: var(--mono); font-size: 8px; letter-spacing: .12em; }
 .quickstart h3 { margin: 14px 0 0; font-family: var(--display); font-size: 23px; font-weight: 500; letter-spacing: -.05em; }
+.repository-note { margin: 22px 11px 0; color: #82988d; font-size: 9px; line-height: 1.8; }
+.repository-note a { color: var(--mint); text-decoration: underline; text-underline-offset: 3px; }
+.repository-note code { color: #b6d5c2; font-family: var(--mono); }
 .terminal-card { overflow: hidden; border: 1px solid rgba(181, 220, 199, .15); border-radius: 4px; background: #071319; }
 .terminal-bar { display: flex; height: 34px; align-items: center; gap: 5px; padding: 0 12px; border-bottom: 1px solid rgba(181, 220, 199, .1); }
 .terminal-bar > span { width: 6px; height: 6px; border-radius: 50%; background: #a45b54; }
@@ -270,6 +277,9 @@ button { font: inherit; }
 .footer-line { grid-column: 1 / -1; height: 1px; margin-top: 17px; background: var(--line); }
 .site-footer > small { grid-column: 1; color: #71867c; font-family: var(--mono); font-size: 7px; letter-spacing: .1em; }
 .site-footer > .footer-year { grid-column: 2; grid-row: 4; text-align: right; }
+.footer-repo { grid-column: 1 / -1; justify-self: start; color: #81968b; font-family: var(--mono); font-size: 8px; letter-spacing: .04em; overflow-wrap: anywhere; transition: color .2s ease; }
+.footer-repo:hover { color: var(--mint); }
+.footer-repo span { margin-left: 4px; color: var(--mint); }
 
 @media (min-width: 1440px) {
   .hero { min-height: 700px; }
@@ -366,6 +376,8 @@ button { font: inherit; }
   .launch-card { min-height: 0; grid-template-columns: 1fr; padding: 31px 24px 27px; }
   .launch-copy h2 { font-size: 36px; }
   .launch-copy > p { max-width: 100%; font-size: 10px; }
+  .launch-actions { max-width: 290px; gap: 8px; }
+  .launch-actions .button { gap: 10px; }
   .launch-side { position: absolute; right: 11px; bottom: 20px; width: 115px; height: 115px; opacity: .72; }
   .launch-compass { width: 95px; }
   .launch-compass::before { width: 75px; }
@@ -376,11 +388,13 @@ button { font: inherit; }
   .orbit-a { top: 51px; right: -42px; width: 185px; }
   .orbit-b { top: 69px; right: -18px; width: 139px; }
   .quickstart { grid-template-columns: 1fr; gap: 19px; padding: 43px 0 0; }
+  .repository-note { margin-right: 0; margin-left: 0; font-size: 8px; }
   .quickstart h3 { margin-top: 9px; font-size: 21px; }
   .terminal-card pre { font-size: 8px; }
   .site-footer { gap: 10px; padding-top: 22px; }
   .back-top { font-size: 7px; }
   .site-footer > small { font-size: 6px; }
+  .footer-repo { font-size: 7px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
