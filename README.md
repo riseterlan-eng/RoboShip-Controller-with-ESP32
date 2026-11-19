@@ -18,9 +18,17 @@ Server hanya melayani situs lokal di komputer sendiri. Untuk kontrol Bluetooth B
 
 Workflow `.github/workflows/deploy.yml` menerbitkan isi folder `public/` ke GitHub Pages setiap kali ada push ke branch `main`.
 
-1. Buat repository GitHub publik dan unggah seluruh isi folder proyek ini.
-2. Pada repository GitHub, buka **Settings → Pages**, lalu pada **Build and deployment → Source** pilih **GitHub Actions**.
-3. Buka tab **Actions** dan tunggu workflow **Deploy to GitHub Pages** berhasil.
-4. Situs akan tersedia di `https://USERNAME.github.io/NAMA-REPOSITORY/`.
+1. Buat repository **publik dan kosong** di GitHub. Jangan centang opsi untuk menambahkan README, license, atau `.gitignore`.
+2. Dari terminal di folder proyek, hubungkan repository baru lalu unggah branch `main`:
+
+   ```powershell
+   git remote add origin https://github.com/USERNAME/NAMA-REPOSITORY.git
+   git push -u origin main
+   ```
+
+   Ganti `USERNAME` dan `NAMA-REPOSITORY` sesuai repository GitHub Anda.
+3. Pada repository GitHub, buka **Settings → Pages**, lalu pada **Build and deployment → Source** pilih **GitHub Actions**.
+4. Buka tab **Actions** dan tunggu workflow **Deploy to GitHub Pages** berhasil.
+5. Situs akan tersedia di `https://USERNAME.github.io/NAMA-REPOSITORY/`.
 
 Perubahan pada folder `public/` akan diperbarui otomatis setelah di-push ke branch `main`. Aset web menggunakan path relatif agar tetap berjalan pada URL GitHub Pages tersebut.
